@@ -12,10 +12,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm ci
+      # 只安装前端依赖
+      - name: Install client dependencies
+        working-directory: ./client
+        run: npm install
 
-      - name: Build
+      # 直接执行前端vite打包
+      - name: Build frontend
+        working-directory: ./client
         run: npm run build
 
       - name: Deploy to GitHub Pages
