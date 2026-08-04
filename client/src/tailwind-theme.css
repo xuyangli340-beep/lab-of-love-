@@ -1,0 +1,253 @@
+:root {
+  --button-outline: rgba(0, 0, 0, 0.10);
+  --badge-outline: rgba(0, 0, 0, 0.05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0, 0, 0, 0.03);
+  --elevate-2: rgba(0, 0, 0, 0.08);
+
+  /* === 粉紫渐变配色体系 === */
+  --background: hsl(330 100% 98%);
+  --foreground: hsl(310 15% 17%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(310 15% 17%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(310 15% 17%);
+
+  --primary: hsl(324 75% 61%);
+  --primary-foreground: hsl(0 0% 100%);
+  --primary-gradient: linear-gradient(135deg, hsl(324 75% 61%), hsl(266 68% 59%));
+
+  --secondary: hsl(324 40% 95%);
+  --secondary-foreground: hsl(324 75% 35%);
+  --muted: hsl(324 20% 96%);
+  --muted-foreground: hsl(310 8% 45%);
+  --accent: hsl(324 40% 95%);
+  --accent-foreground: hsl(324 75% 45%);
+
+  --info: hsl(266 68% 59%);
+  --info-foreground: hsl(0 0% 100%);
+  --destructive: hsl(350 80% 58%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --success: hsl(145 60% 42%);
+  --success-foreground: hsl(0 0% 100%);
+  --warning: hsl(38 90% 50%);
+  --warning-foreground: hsl(0 0% 100%);
+
+  --border: hsl(324 30% 90%);
+  --input: hsl(324 30% 90%);
+  --ring: hsl(324 75% 61%);
+
+  /* 图表配色 - 粉紫渐变系 */
+  --chart-1: hsl(324 75% 61%);
+  --chart-2: hsl(266 68% 59%);
+  --chart-3: hsl(345 70% 65%);
+  --chart-4: hsl(280 60% 65%);
+  --chart-5: hsl(300 55% 70%);
+
+  /* Sidebar */
+  --sidebar: hsl(330 50% 97%);
+  --sidebar-foreground: hsl(310 15% 17%);
+  --sidebar-primary: hsl(324 75% 61%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(324 40% 95%);
+  --sidebar-accent-foreground: hsl(324 75% 45%);
+  --sidebar-border: hsl(324 30% 90%);
+  --sidebar-ring: hsl(324 75% 61%);
+
+  /* 计算边框 */
+  --primary-border: hsl(from hsl(324 75% 61%) h s calc(l + var(--opaque-button-border-intensity)));
+  --secondary-border: hsl(from hsl(324 40% 95%) h s calc(l + var(--opaque-button-border-intensity)));
+  --destructive-border: hsl(from hsl(350 80% 58%) h s calc(l + var(--opaque-button-border-intensity)));
+  --accent-border: hsl(from hsl(324 40% 95%) h s calc(l + var(--opaque-button-border-intensity)));
+  --muted-border: hsl(from hsl(324 20% 96%) h s calc(l + var(--opaque-button-border-intensity)));
+
+  /* 字体 */
+  --font-sans:
+    'Inter', 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif:
+    'Noto Serif SC', 'Source Han Serif CN', Georgia, 'Times New Roman', Times, serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+
+  /* 大圆角 - 28px */
+  --radius: 1.75rem;
+
+  /* 柔和阴影 */
+  --shadow-x: 0px;
+  --shadow-y: 8px;
+  --shadow-blur: 32px;
+  --shadow-spread: -8px;
+  --shadow-opacity: 0.08;
+  --shadow-color: hsl(324 75% 61%);
+
+  --shadow-2xs: 0 2px 8px -2px hsl(324 75% 61% / 0.06);
+  --shadow-xs: 0 4px 12px -4px hsl(324 75% 61% / 0.08);
+  --shadow-sm: 0 6px 20px -6px hsl(324 75% 61% / 0.08);
+  --shadow: 0 8px 32px -8px hsl(324 75% 61% / 0.08);
+  --shadow-md: 0 12px 40px -12px hsl(324 75% 61% / 0.10);
+  --shadow-lg: 0 16px 48px -12px hsl(324 75% 61% / 0.12);
+  --shadow-xl: 0 24px 64px -16px hsl(324 75% 61% / 0.14);
+  --shadow-2xl: 0 32px 80px -20px hsl(324 75% 61% / 0.18);
+
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 12px);
+  --radius-md: calc(var(--radius) - 8px);
+  --radius-lg: calc(var(--radius) - 4px);
+  --radius-xl: var(--radius);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+}
+
+/* === 渐变工具类 === */
+@layer utilities {
+  .bg-primary-gradient {
+    background: var(--primary-gradient);
+  }
+
+  .text-primary-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .border-primary-gradient {
+    border-image: var(--primary-gradient) 1;
+  }
+
+  .glow-pink-purple {
+    box-shadow: 0 0 60px -10px hsl(324 75% 61% / 0.30),
+      0 0 40px -15px hsl(266 68% 59% / 0.25);
+  }
+
+  .text-on-dark-gradient {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  /* 隐藏搜索框取消按钮 */
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  /* contentEditable 占位符 */
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: var(--muted-foreground);
+    pointer-events: none;
+  }
+
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+}
