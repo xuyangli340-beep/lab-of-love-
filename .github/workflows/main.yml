@@ -12,18 +12,14 @@ jobs:
         with:
           node-version: 20
 
-      # 只安装前端依赖
-      - name: Install client dependencies
-        working-directory: ./client
+      - name: Install dependencies
         run: npm install
 
-      # 直接执行前端vite打包
       - name: Build frontend
-        working-directory: ./client
-        run: npm run build
+        run: npx vite build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./client/dist
+          publish_dir: ./dist
