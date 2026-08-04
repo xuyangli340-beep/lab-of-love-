@@ -1,0 +1,29 @@
+[
+  {
+    "path": "/"
+  },
+  {
+    "path": "/auth/login"
+  },
+  {
+    "path": "/auth/register"
+  },
+  {
+    "path": "/wizard/profile"
+  },
+  {
+    "path": "/wizard/interview"
+  },
+  {
+    "path": "/wizard/model"
+  },
+  {
+    "path": "/wizard/portrait"
+  },
+  {
+    "path": "/wizard/candidates"
+  },
+  {
+    "path": "/wizard/team"
+  }
+]
